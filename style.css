@@ -8,6 +8,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* começo header*/
+
 .header-inner-content {
     max-width: 1300px;
     margin-left: auto;
@@ -27,6 +29,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .logo {
@@ -124,4 +127,114 @@ header{
 
 .header-bottom-side-rigth img {
     width: 115%;
+}
+/*responsivo header*/
+@media(max-width: 800px){
+    .logo{
+        font-size: 1.2rem;
+    }
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+    nav{
+        position: absolute;
+        background-color: #2c2c2c;
+        width: 100%;
+        top: 46px;
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .showMenu nav{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+}
+
+
+/*fim header*/
+
+/*main content inicio*/
+main{
+    background-color: #ebebeb;
+}
+
+.gray-background{
+    background-color: #2c2c2c;
+}
+.page-inner-content{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.cols{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+.cols-3{
+    grid-template-columns: repeat(3, 2fr);
+    gap: 3rem;
+}
+.cols-3 img{
+    max-width: 100%;
+}
+.cols-4 img{
+    max-width: 100%;
+}
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.cols>*{
+    cursor:pointer ;
+    transition: all 0.2s;
+}
+.cols>*:hover{
+    transform: translateY(-9px);
+}
+.section-title{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+.subtitle-underline{
+    width: 100px;
+    height: 5px;
+    background-color: #0084ff;
+    border-radius: 9999px;
+    margin: 8px auto 0 auto;
+}
+.product{
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.product-name{
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+.rate{
+    color: #0084ff;
+    font-size: 1.3rem;
+}
+.product-price span{
+    font-weight: 600;
+}
+.exclusive-container{
+    color: #fff;
+    flex-direction: row-reverse;
+    padding: 5rem 1rem;
+}
+.exclusive-container img{
+    max-width: 500px;
 }
